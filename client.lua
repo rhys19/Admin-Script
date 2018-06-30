@@ -18,7 +18,7 @@ end)
 
 RegisterNetEvent('AdminScript:NoPerms')
 AddEventHandler('AdminScript:NoPerms', function()
-	TriggerEvent("chatMessage", "Admin Script", {255, 0, 0}, "Insignificant Permissions to run command.")
+	TriggerEvent("chatMessage", "Admin Script", {255, 0, 0}, "Insufficient Permissions.")
 	end)
 
 
@@ -28,7 +28,7 @@ Citizen.CreateThread(function()
 		if isadmin == true then
 			DrawText5("~g~Priorities Are On Hold")
 			DrawText2("~r~ ADMIN PURSUIT NEARBY")
-			DrawText3("~y~ Stop what you are doing and pull over to the side of the road!")
+			DrawText3("~y~ Pull over, and stop!")
 		end
 	end
 end)
