@@ -25,7 +25,7 @@ AddEventHandler('AdminScript:NoPerms', function()
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
-		if isadmin == true then
+		if isadmin == true and GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(myId)), GetEntityCoords(GetPlayerPed(pid)), true) < 19.999 then
 			DrawText5("~g~Priorities Are On Hold")
 			DrawText2("~r~ ADMIN PURSUIT NEARBY")
 			DrawText3("~y~ Pull over, and stop!")
