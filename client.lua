@@ -4,18 +4,6 @@ CREATED BY RHYS19
 Proximity and players in pursuit by Xander1998
 --]]
 
---[[isadmin = false
-
-RegisterNetEvent('UpdateAdmin')
-AddEventHandler('UpdateAdmin', function(newisadmin)
-    isadmin = newisadmin
-end)
-
-RegisterNetEvent('CancelAdmin')
-AddEventHandler('CancelAdmin', function(newisnotadmin)
-    isadmin = newisadmin
-end)--]]
-
 RegisterNetEvent('AdminScript:NoPerms')
 AddEventHandler('AdminScript:NoPerms', function()
 	TriggerEvent("chatMessage", "Admin Script", {255, 0, 0}, "Insufficient Permissions to run command.")
@@ -60,7 +48,7 @@ Citizen.CreateThread(function()
                 if distance <= 75.0 then
                     DrawText5("~g~Priorities Are On Hold")
                     DrawText2("~r~ ADMIN PURSUIT NEARBY")
-                    DrawText3("~y~ STOP WHAT YOU ARE DOING AND PULL OVER TO THE SIDE OF THE ROAD!")
+                    DrawText3("~y~ Pull over, and stop what you are doing!")
 
                     local pursuitCount = 0
                     for b = 1, #admins do
@@ -89,7 +77,7 @@ end)
         DrawText(0.299, 0.0)
     end
 	
-	--[[function DrawText3(text)
+	function DrawText3(text)
         SetTextFont(0)
         SetTextProportional(1)
         SetTextScale(2.2, 0.45)
@@ -99,8 +87,8 @@ end)
         SetTextOutline()
         SetTextEntry("STRING")
         AddTextComponentString(text)
-        DrawText(0.277, 0.055)
-    end--]]
+        DrawText(0.345, 0.055)
+    end
 	
 	function DrawText4(text)
         SetTextFont(0)
