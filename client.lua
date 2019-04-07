@@ -45,7 +45,7 @@ Citizen.CreateThread(function()
 
             if GetPlayerServerId(lPlayer) == admins[a] then
                 local distance = Vdist(lPlayerPedPos.x, lPlayerPedPos.y, lPlayerPedPos.z, oPlayerPedPos.x, oPlayerPedPos.y, oPlayerPedPos.z)
-                if distance <= 75.0 then
+                if distance < 75.0 then
                     DrawText5("~g~Priorities Are On Hold")
                     DrawText2("~r~ ADMIN PURSUIT NEARBY")
                     DrawText3("~y~ Pull over, and stop what you are doing!")
